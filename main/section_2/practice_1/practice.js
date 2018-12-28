@@ -1,5 +1,13 @@
 function count_same_elements(collection) {
-  //在这里写入代码
+  let count = {};
+  collection.forEach(item => {
+    count[item] = count[item] ? count[item] + 1 : 1;
+  });
+  return Object.keys(count).map(attr => {
+    return {
+      key: attr,
+      count: count[attr]
+    }
+  })
 }
-
 module.exports = count_same_elements;
