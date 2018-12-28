@@ -1,8 +1,8 @@
 'use strict';
 
 function double_to_one(collection) {
-
-  //在这里写入代码
+  return collection.reduce((flatArr, item) => {
+    return flatArr.concat(item);
+  }, []);
 }
-
 module.exports = double_to_one;
