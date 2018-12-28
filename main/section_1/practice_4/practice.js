@@ -1,5 +1,8 @@
 function collect_same_elements(collection_a, object_b) {
-  //在这里写入代码
+  let arrA = collection_a.map(item => item.key);
+  let arrB = object_b.value;
+  return arrA.filter(item => {
+    return arrB.includes(item);
+  });
 }
-
 module.exports = collect_same_elements;
